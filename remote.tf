@@ -1,9 +1,11 @@
-resource "aws_s3_bucket" "my_bucket" {
-    bucket = "lms-bucket"
+resource "aws_s3_bucket" "my-bucket" {
+    bucket = "lms-my-bucket"
     tags={
         Name = "my-bucket"
     }
 }
+#dynamodb
+
 resource "aws_dynamodb_table" "terraform_lock" {
   name             = "terraform-lock"
   hash_key         = "LockID"
